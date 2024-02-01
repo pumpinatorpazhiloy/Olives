@@ -7865,60 +7865,110 @@
             type: "button",
             onClick: () => setOpen(false)
         }, react.createElement("img", {
-            src: "img/closeBtn.svg",
+            src: "img/header&main/closeBtn.svg",
             alt: "close button"
         }))));
         const popup_SignUpPopup = SignUpPopup;
-        const Header = () => {
-            const [open, setOpen] = (0, react.useState)(true);
-            return react.createElement(react.Fragment, null, react.createElement("div", {
-                className: "header"
-            }, open ? react.createElement(popup_SignUpPopup, {
-                setOpen
-            }) : null, react.createElement("div", {
-                className: "header__container"
-            }, react.createElement("div", {
-                className: "header__menu menu"
-            }, react.createElement("button", {
+        const Burger = () => {
+            const menuInit = () => {
+                if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
+                    if (bodyLockStatus && e.target.closest(".icon-menu")) {
+                        bodyLockToggle();
+                        document.documentElement.classList.toggle("menu-open");
+                    }
+                }));
+            };
+            let bodyLockStatus = true;
+            let bodyLock = (delay = 500) => {
+                let body = document.querySelector("body");
+                if (bodyLockStatus) {
+                    let lock_padding = document.querySelectorAll("[data-lp]");
+                    for (let index = 0; index < lock_padding.length; index++) {
+                        const el = lock_padding[index];
+                        el.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+                    }
+                    body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+                    document.documentElement.classList.add("lock");
+                    bodyLockStatus = false;
+                    setTimeout((function() {
+                        bodyLockStatus = true;
+                    }), delay);
+                }
+            };
+            let bodyLockToggle = (delay = 500) => {
+                if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+            };
+            let bodyUnlock = (delay = 500) => {
+                let body = document.querySelector("body");
+                if (bodyLockStatus) {
+                    let lock_padding = document.querySelectorAll("[data-lp]");
+                    setTimeout((() => {
+                        for (let index = 0; index < lock_padding.length; index++) {
+                            const el = lock_padding[index];
+                            el.style.paddingRight = "0px";
+                        }
+                        body.style.paddingRight = "0px";
+                        document.documentElement.classList.remove("lock");
+                    }), delay);
+                    bodyLockStatus = false;
+                    setTimeout((function() {
+                        bodyLockStatus = true;
+                    }), delay);
+                }
+            };
+            return react.createElement(react.Fragment, null, react.createElement("button", {
                 type: "button",
+                onClick: menuInit,
                 className: "menu__icon icon-menu"
-            }, react.createElement("img", {
-                src: "img/logo.svg",
-                alt: "logo"
-            })), react.createElement("nav", {
-                className: "menu__body"
-            }, react.createElement("ul", {
-                className: "menu__list"
-            }, react.createElement("li", {
-                className: "menu__item"
-            }, react.createElement("a", {
-                href: "",
-                className: "menu__link"
-            }, "Who we are")), react.createElement("li", {
-                className: "menu__item"
-            }, react.createElement("a", {
-                href: "",
-                className: "menu__link"
-            }, "What we do")), react.createElement("li", {
-                className: "menu__item"
-            }, react.createElement("a", {
-                href: "",
-                className: "menu__link"
-            }, "The product")), react.createElement("li", {
-                className: "menu__item"
-            }, react.createElement("a", {
-                href: "",
-                className: "menu__link"
-            }, "Health")), react.createElement("li", {
-                className: "menu__item"
-            }, react.createElement("a", {
-                href: "",
-                className: "menu__link"
-            }, "Contact us")))), react.createElement("button", {
-                type: "button",
-                className: "menu__button"
-            }, react.createElement("span", null, "LET’S DO BUSINESS"))))));
+            }, react.createElement("span", null)));
         };
+        const burger_Burger = Burger;
+        const Header = () => react.createElement(react.Fragment, null, react.createElement("div", {
+            className: "header"
+        }, react.createElement("div", {
+            className: "header__container"
+        }, react.createElement("div", {
+            className: "header__menu menu"
+        }, react.createElement("div", {
+            className: "menu__logo"
+        }, react.createElement("a", {
+            href: "#"
+        }, react.createElement("img", {
+            src: "img/header&main/logo.svg",
+            alt: "logo"
+        }))), react.createElement("nav", {
+            className: "menu__body"
+        }, react.createElement(burger_Burger, null), react.createElement("ul", {
+            className: "menu__list"
+        }, react.createElement("li", {
+            className: "menu__item"
+        }, react.createElement("a", {
+            href: "#",
+            className: "menu__link"
+        }, "Who we are")), react.createElement("li", {
+            className: "menu__item"
+        }, react.createElement("a", {
+            href: "#",
+            className: "menu__link"
+        }, "What we do")), react.createElement("li", {
+            className: "menu__item"
+        }, react.createElement("a", {
+            href: "#",
+            className: "menu__link"
+        }, "The product")), react.createElement("li", {
+            className: "menu__item"
+        }, react.createElement("a", {
+            href: "#",
+            className: "menu__link"
+        }, "Health")), react.createElement("li", {
+            className: "menu__item"
+        }, react.createElement("a", {
+            href: "#",
+            className: "menu__link"
+        }, "Contact us")))), react.createElement("button", {
+            type: "button",
+            className: "menu__button"
+        }, react.createElement("span", null, "LET’S DO BUSINESS"))))));
         const header_Header = Header;
         const Main = () => react.createElement(react.Fragment, null, react.createElement("div", {
             className: "main"
@@ -7936,7 +7986,59 @@
             className: "hero__description"
         }, "It is a long established fact that a reader ", react.createElement("br", null), " will be distracted by the readable content of a pag when looking at its layout."))))));
         const main_Main = Main;
-        const App = () => react.createElement(react.Fragment, null, react.createElement(header_Header, null), react.createElement(main_Main, null));
+        const Title = ({title}) => react.createElement(react.Fragment, null, react.createElement("h1", {
+            className: "who-text__title"
+        }, title));
+        const title_Title = Title;
+        const SectionTemplate = ({img, title, p}) => react.createElement(react.Fragment, null, react.createElement("section", {
+            className: "who"
+        }, react.createElement("div", {
+            className: "who__container"
+        }, react.createElement("div", {
+            className: "who-section"
+        }, react.createElement("div", {
+            className: "who-section__image"
+        }, react.createElement("img", {
+            src: `img/whoWeAre/${img}`,
+            alt: "img"
+        })), react.createElement("div", {
+            className: "who-section__text who-text"
+        }, react.createElement(title_Title, {
+            title
+        }), react.createElement("p", {
+            className: "who-text__paragraph"
+        }, p), react.createElement("a", {
+            href: "#",
+            className: "who-text__link"
+        }, react.createElement("span", null, "READ MORE")))))));
+        const WhoWeAre = SectionTemplate;
+        const WhatWeDo = () => react.createElement(react.Fragment, null, react.createElement("div", {
+            className: "whoWeDo"
+        }, react.createElement("div", {
+            className: "whoWeDo__container"
+        }, react.createElement("div", {
+            className: "whoWeDo__title"
+        }, "WHAT WE DO"), react.createElement("div", {
+            className: "whoWeDo__video"
+        }, react.createElement("video", {
+            controls: true,
+            src: "img/whatWeDo/oilVideo.mp4"
+        })))));
+        const whatWeDo_WhatWeDo = WhatWeDo;
+        const App = () => {
+            const [open, setOpen] = (0, react.useState)(true);
+            return react.createElement(react.Fragment, null, react.createElement("div", {
+                className: "wrapper"
+            }, open ? react.createElement(popup_SignUpPopup, {
+                setOpen
+            }) : null, react.createElement("div", {
+                className: "main-wrapper"
+            }, react.createElement(header_Header, null), react.createElement(main_Main, null)), react.createElement(WhoWeAre, {
+                img: "oliveOil.jpg",
+                title: "WHO WE ARE",
+                p: "Company we are proud to deliver hight quality standarts. In natural enviroment production, delivery and flexibility. organic bio oil a special production from our farm. "
+            }), react.createElement(whatWeDo_WhatWeDo, null)));
+        };
         const app_App = App;
         const root = document.querySelector("#root");
         client.createRoot(root).render(react.createElement(react.StrictMode, null, react.createElement(app_App, null)));
@@ -7953,6 +8055,52 @@
                 document.documentElement.classList.add(className);
             }));
         }
+        let bodyLockStatus = true;
+        let bodyLockToggle = (delay = 500) => {
+            if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+        };
+        let bodyUnlock = (delay = 500) => {
+            let body = document.querySelector("body");
+            if (bodyLockStatus) {
+                let lock_padding = document.querySelectorAll("[data-lp]");
+                setTimeout((() => {
+                    for (let index = 0; index < lock_padding.length; index++) {
+                        const el = lock_padding[index];
+                        el.style.paddingRight = "0px";
+                    }
+                    body.style.paddingRight = "0px";
+                    document.documentElement.classList.remove("lock");
+                }), delay);
+                bodyLockStatus = false;
+                setTimeout((function() {
+                    bodyLockStatus = true;
+                }), delay);
+            }
+        };
+        let bodyLock = (delay = 500) => {
+            let body = document.querySelector("body");
+            if (bodyLockStatus) {
+                let lock_padding = document.querySelectorAll("[data-lp]");
+                for (let index = 0; index < lock_padding.length; index++) {
+                    const el = lock_padding[index];
+                    el.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+                }
+                body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+                document.documentElement.classList.add("lock");
+                bodyLockStatus = false;
+                setTimeout((function() {
+                    bodyLockStatus = true;
+                }), delay);
+            }
+        };
+        function menuInit() {
+            if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
+                if (bodyLockStatus && e.target.closest(".icon-menu")) {
+                    bodyLockToggle();
+                    document.documentElement.classList.toggle("menu-open");
+                }
+            }));
+        }
         let addWindowScrollEvent = false;
         setTimeout((() => {
             if (addWindowScrollEvent) {
@@ -7964,5 +8112,6 @@
         }), 0);
         window["FLS"] = true;
         isWebp();
+        menuInit();
     })();
 })();
