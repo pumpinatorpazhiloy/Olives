@@ -250,7 +250,7 @@ h6 {
 }
 
 .menu__button:hover span {
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
 }
 
 .main-wrapper {
@@ -298,7 +298,7 @@ h6 {
 }
 
 .no-webp .main-wrapper:before{
-  background: url(../img/header&main/bg.jpg) right/auto auto no-repeat; }
+  background: url(../img/header&main/bg.jpg) center/auto auto no-repeat; }
 
 .main-wrapper:before {
   content: "";
@@ -371,8 +371,68 @@ h6 {
   letter-spacing: 0.2px;
 }
 
+.product {
+  padding: 6.25rem 0rem 5rem 0rem;
+}
+
+.product-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 38.25rem minmax(20.9375rem, 29.25rem);
+  grid-template-columns: 38.25rem minmax(20.9375rem, 29.25rem);
+  -webkit-column-gap: 2.625rem;
+     -moz-column-gap: 2.625rem;
+          column-gap: 2.625rem;
+}
+
+.product-section__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-text {
+  line-height: 133%;
+  color: #7E4E24;
+  max-width: 29.25rem;
+}
+
+.product-text:before {
+  content: url(../img/whoWeAre/text_before.svg);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0.9375rem;
+  z-index: -1;
+}
+
+.product-text__title {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  padding: 0.9375rem 0rem 3.625rem 0.625rem;
+}
+
+.product-text__paragraph {
+  color: #25282B;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  max-width: 28.125rem;
+  padding: 0rem 0rem 1.5rem 0.625rem;
+}
+
+.product-text__link {
+  padding-left: 0.625rem;
+}
+
+.product-text__link span {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
 .whoWeDo {
-  padding: 4.6875rem 0rem 4.6875rem 0rem;
+  padding: 4.6875rem 0rem 1.875rem 0rem;
 }
 
 .whoWeDo__title {
@@ -408,6 +468,156 @@ h6 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.health-bunner {
+  position: relative;
+}
+
+.no-webp .health-bunner:before{
+  background: url(../img/healthBunner/bg.png) center/1826px 489px no-repeat; }
+
+.health-bunner:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 114.3125rem;
+  height: 30.5625rem;
+  background-size: cover;
+  z-index: -1;
+}
+
+.health-bunner__container {
+  padding: 8.625rem 0rem 5.625rem 0rem;
+}
+
+.health-bunner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.health-bunner__text {
+  text-align: center;
+  color: #7E4E24;
+  margin-bottom: 4.1875rem;
+}
+
+.health-bunner__title {
+  font-size: 3.25rem;
+  letter-spacing: 0.2px;
+  font-weight: 300;
+  line-height: 4rem;
+  margin-bottom: 2.1875rem;
+}
+
+.health-bunner__link {
+  letter-spacing: 0.2px;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.health-bunner__readmore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.business {
+  position: relative;
+  padding: 18.75rem 0rem 21.5rem 0rem;
+}
+
+.no-webp .business:before{
+  background: url(../img/business/bg2.jpg); }
+
+.business:before {
+  content: "";
+  position: absolute;
+  top: 51.5%;
+  left: 49.5%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 96.125rem;
+  height: 54.25rem;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.business__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.business__text {
+  padding: 0rem 0rem 2.5rem 0rem;
+  text-align: center;
+}
+
+.business__label {
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  color: #7E4E24;
+}
+
+.business__title {
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 54px;
+  color: #7E4E24;
+  margin-bottom: 2.875rem;
+}
+
+.business__title span {
+  color: #697B03;
+}
+
+.business__description {
+  font-weight: 500;
+  line-height: 133%;
+  letter-spacing: 0.2px;
+  color: #7E4E24;
+  max-width: 29.375rem;
+  margin: 0 auto;
+}
+
+.business__button {
+  max-width: 12.1875rem;
+  padding: 1.25rem 3.125rem;
+  background: #697B03;
+  border-radius: 0.3125rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 0 auto;
+  margin-top: 1.875rem;
+}
+
+.business__button:hover {
+  background: #849b02;
+}
+
+.business__button span {
+  font-size: 0.875rem;
+  color: #fff;
 }
 
 [class*=-ibg] {
@@ -554,7 +764,7 @@ h6 {
   }
 
   .who {
-    padding: 3.125rem 0rem 3.125rem 0rem;
+    padding: 0rem 0rem 3.125rem 0rem;
   }
 
   .who-section {
@@ -570,6 +780,27 @@ h6 {
   }
 
   .who-text {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .product {
+    padding: 3.125rem 0rem 3.125rem 0rem;
+  }
+
+  .product-section {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .product-section__image {
+    padding-bottom: 3.125rem;
+  }
+
+  .product-text {
     text-align: center;
     margin: 0 auto;
   }
@@ -611,6 +842,19 @@ h6 {
     padding: 0.9375rem 0rem 1.875rem 0.625rem;
   }
 
+  .product {
+    padding: 2.1875rem 0rem 2.1875rem 0rem;
+  }
+
+  .product-section__image {
+    padding-bottom: 1.875rem;
+  }
+
+  .product-text__title {
+    font-size: 1.75rem;
+    padding: 0.9375rem 0rem 1.875rem 0.625rem;
+  }
+
   .whoWeDo {
     padding: 3.125rem 0rem 3.125rem 0rem;
   }
@@ -638,4 +882,8 @@ h6 {
 }
 }
 
-.webp .main-wrapper:before{ background: url(../img/header&main/bg.webp) right/auto auto no-repeat; }
+.webp .main-wrapper:before{ background: url(../img/header&main/bg.webp) center/auto auto no-repeat; }
+
+.webp .health-bunner:before{ background: url(../img/healthBunner/bg.webp) center/1826px 489px no-repeat; }
+
+.webp .business:before{ background: url(../img/business/bg2.webp); }

@@ -7261,7 +7261,7 @@
                 module.exports = __webpack_require__(448);
             }
         },
-        408: (__unused_webpack_module, exports) => {
+        367: (__unused_webpack_module, exports) => {
             /**
  * @license React
  * react.production.min.js
@@ -7593,7 +7593,7 @@
             exports.version = "18.2.0";
         },
         294: (module, __unused_webpack_exports, __webpack_require__) => {
-            if (true) module.exports = __webpack_require__(408);
+            if (true) module.exports = __webpack_require__(367);
         },
         53: (__unused_webpack_module, exports) => {
             /**
@@ -7970,7 +7970,7 @@
             className: "menu__button"
         }, react.createElement("span", null, "LET’S DO BUSINESS"))))));
         const header_Header = Header;
-        const Main = () => react.createElement(react.Fragment, null, react.createElement("div", {
+        const Main = ({clazz}) => react.createElement(react.Fragment, null, react.createElement("setion", {
             className: "main"
         }, react.createElement("section", {
             className: "hero"
@@ -7986,32 +7986,32 @@
             className: "hero__description"
         }, "It is a long established fact that a reader ", react.createElement("br", null), " will be distracted by the readable content of a pag when looking at its layout."))))));
         const main_Main = Main;
-        const Title = ({title}) => react.createElement(react.Fragment, null, react.createElement("h1", {
+        const Title = ({title}) => react.createElement(react.Fragment, null, react.createElement("h2", {
             className: "who-text__title"
         }, title));
         const title_Title = Title;
-        const SectionTemplate = ({img, title, p}) => react.createElement(react.Fragment, null, react.createElement("section", {
-            className: "who"
+        const SectionTemplate = ({folder, img, title, p, clazz}) => react.createElement(react.Fragment, null, react.createElement("section", {
+            className: `${clazz}`
         }, react.createElement("div", {
-            className: "who__container"
+            className: `${clazz}__container`
         }, react.createElement("div", {
-            className: "who-section"
+            className: `${clazz}-section`
         }, react.createElement("div", {
-            className: "who-section__image"
+            className: `${clazz}-section__image`
         }, react.createElement("img", {
-            src: `img/whoWeAre/${img}`,
+            src: `img/${folder}/${img}`,
             alt: "img"
         })), react.createElement("div", {
-            className: "who-section__text who-text"
+            className: `${clazz}-section__text ${clazz}-text`
         }, react.createElement(title_Title, {
             title
         }), react.createElement("p", {
-            className: "who-text__paragraph"
+            className: `${clazz}-text__paragraph`
         }, p), react.createElement("a", {
             href: "#",
-            className: "who-text__link"
+            className: `${clazz}-text__link`
         }, react.createElement("span", null, "READ MORE")))))));
-        const WhoWeAre = SectionTemplate;
+        const SectionTemplate_SectionTemplate = SectionTemplate;
         const WhatWeDo = () => react.createElement(react.Fragment, null, react.createElement("div", {
             className: "whoWeDo"
         }, react.createElement("div", {
@@ -8025,6 +8025,41 @@
             src: "img/whatWeDo/oilVideo.mp4"
         })))));
         const whatWeDo_WhatWeDo = WhatWeDo;
+        const HealthBanner = () => react.createElement(react.Fragment, null, react.createElement("section", {
+            className: "health-bunner"
+        }, react.createElement("div", {
+            className: "health-bunner__container"
+        }, react.createElement("div", {
+            className: "health-bunner__text"
+        }, react.createElement("h2", {
+            className: "health-bunner__title"
+        }, '"Health is wealth, ', react.createElement("br", null), ' it is always better when it is natural"'), react.createElement("a", {
+            href: "#",
+            className: "health-bunner__link"
+        }, "@crestodina")), react.createElement("a", {
+            href: "#",
+            className: "health-bunner__readmore"
+        }, "READ MORE"))));
+        const healthBanner_HealthBanner = HealthBanner;
+        const LetsBusiness = () => react.createElement(react.Fragment, null, react.createElement("section", {
+            className: "business"
+        }, react.createElement("div", {
+            className: "business__container"
+        }, react.createElement("div", {
+            className: "business__content"
+        }, react.createElement("div", {
+            className: "business__text"
+        }, react.createElement("p", {
+            className: "business__label"
+        }, "natural product"), react.createElement("h2", {
+            className: "business__title"
+        }, react.createElement("span", null, "Let’s do business"), " together!"), react.createElement("p", {
+            className: "business__description"
+        }, react.createElement("p", null, "It is a long established fact that a reader ", react.createElement("br", null), " will be distracted by the readable content of a pag when looking at its layout.")), react.createElement("button", {
+            type: "button",
+            className: "business__button"
+        }, react.createElement("span", null, "CONTACT US")))))));
+        const letsBusiness_LetsBusiness = LetsBusiness;
         const App = () => {
             const [open, setOpen] = (0, react.useState)(true);
             return react.createElement(react.Fragment, null, react.createElement("div", {
@@ -8033,11 +8068,21 @@
                 setOpen
             }) : null, react.createElement("div", {
                 className: "main-wrapper"
-            }, react.createElement(header_Header, null), react.createElement(main_Main, null)), react.createElement(WhoWeAre, {
+            }, react.createElement(header_Header, null), react.createElement(main_Main, {
+                clazz: "main"
+            })), react.createElement(SectionTemplate_SectionTemplate, {
+                clazz: "who",
+                folder: "whoWeAre",
                 img: "oliveOil.jpg",
                 title: "WHO WE ARE",
-                p: "Company we are proud to deliver hight quality standarts. In natural enviroment production, delivery and flexibility. organic bio oil a special production from our farm. "
-            }), react.createElement(whatWeDo_WhatWeDo, null)));
+                p: "Company we are proud to deliver hight quality standarts. In natural enviroment production, delivery and flexibility. organic bio oil a special production from our farm."
+            }), react.createElement(whatWeDo_WhatWeDo, null), react.createElement(healthBanner_HealthBanner, null), react.createElement(SectionTemplate_SectionTemplate, {
+                folder: "product",
+                img: "product.jpeg",
+                title: "PRODUCT",
+                p: "Company we are proud to deliver hight quality standarts. In natural enviroment production, delivery and flexibility. organic bio oil a special production from our farm.",
+                clazz: "product"
+            }), react.createElement(letsBusiness_LetsBusiness, null)));
         };
         const app_App = App;
         const root = document.querySelector("#root");
