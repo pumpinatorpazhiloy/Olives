@@ -7261,7 +7261,7 @@
                 module.exports = __webpack_require__(448);
             }
         },
-        367: (__unused_webpack_module, exports) => {
+        408: (__unused_webpack_module, exports) => {
             /**
  * @license React
  * react.production.min.js
@@ -7593,7 +7593,7 @@
             exports.version = "18.2.0";
         },
         294: (module, __unused_webpack_exports, __webpack_require__) => {
-            if (true) module.exports = __webpack_require__(367);
+            if (true) module.exports = __webpack_require__(408);
         },
         53: (__unused_webpack_module, exports) => {
             /**
@@ -8060,6 +8060,115 @@
             className: "business__button"
         }, react.createElement("span", null, "CONTACT US")))))));
         const letsBusiness_LetsBusiness = LetsBusiness;
+        const Footer = () => react.createElement(react.Fragment, null, react.createElement("footer", {
+            className: "footer"
+        }, react.createElement("div", {
+            className: "footer__container"
+        }, react.createElement("div", {
+            className: "footer-top"
+        }, react.createElement("div", {
+            className: "footer-top__columns"
+        }, react.createElement("div", {
+            className: "footer-top__column"
+        }, react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "Subscribe to LOGO PRO")), react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "Digital Produts")), react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "Corrections")), react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "Licensing & Reprints")), react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "Site Map")), react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "Help"))), react.createElement("div", {
+            className: "footer-top__column"
+        }, react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "News Releases")), react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "Advertise With Us")), react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "AdChoices")), react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "Careers")), react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "About LOGO")), react.createElement("a", {
+            href: "#",
+            className: "footer-top__link"
+        }, react.createElement("span", null, "Contact"))), react.createElement("div", {
+            className: "footer-top__column"
+        }, react.createElement("h3", {
+            className: "footer-top__title"
+        }, react.createElement("span", null, "News Tips")), react.createElement("p", {
+            className: "footer-top__text"
+        }, "Got a confidential news tip? We want to hear from you."), react.createElement("button", {
+            type: "button",
+            className: "footer-top__button"
+        }, react.createElement("span", null, "GET IN TOUCH"))), react.createElement("div", {
+            className: "footer-top__column"
+        }, react.createElement("h3", {
+            className: "footer-top__title"
+        }, react.createElement("span", null, "LOGO Newsletters")), react.createElement("p", {
+            className: "footer-top__text"
+        }, react.createElement("span", null, "Sign Up for free newsletters and get more LOGO delivered to your inbox")), react.createElement("button", {
+            type: "button",
+            className: "footer-top__button"
+        }, react.createElement("span", null, "SIGN UP NOW")), react.createElement("p", {
+            className: "footer-top__text_s"
+        }, react.createElement("span", null, "Get this delivered to your inbox, and more info about oue products and services")))), react.createElement("p", {
+            className: "footer-top__data"
+        }, react.createElement("span", null, "Data is a real-time snapshot *Data is delayed at least 15 minutes. Global Olives and Natural product, Market and Analysis.")))), react.createElement("div", {
+            className: "footer-bottom"
+        }, react.createElement("div", {
+            className: "footer-bottom__wrapper"
+        }, react.createElement("div", {
+            className: "footer-bottom__terms"
+        }, react.createElement("a", {
+            href: "#",
+            className: "footer-bottom__item"
+        }, react.createElement("span", null, react.createElement("a", {
+            className: "footer-bottom__link_1",
+            href: "#"
+        }, "Privacy Policy")), " /", react.createElement("span", null, react.createElement("a", {
+            className: "footer-bottom__link_2",
+            href: "#"
+        }, " Personal Information")), " /", react.createElement("span", null, react.createElement("a", {
+            className: "footer-bottom__link_3",
+            href: "#"
+        }, " Terms of Service")))), react.createElement("div", {
+            className: "footer-bottom__logo"
+        }, react.createElement("img", {
+            src: "img/footer/logo.png",
+            alt: "logo"
+        })), react.createElement("div", {
+            className: "footer-bottom__social"
+        }, react.createElement("div", {
+            className: "footer-bottom__olives"
+        }, react.createElement("span", null, "2024 Green olives")), react.createElement("div", {
+            className: "footer-bottom__inst"
+        }, react.createElement("img", {
+            src: "img/footer/inst.svg",
+            alt: "fb"
+        })), react.createElement("div", {
+            className: "footer-bottom__fb"
+        }, react.createElement("img", {
+            src: "img/footer/fb.svg",
+            alt: "fb"
+        })))))));
+        const footer_Footer = Footer;
         const App = () => {
             const [open, setOpen] = (0, react.useState)(true);
             return react.createElement(react.Fragment, null, react.createElement("div", {
@@ -8082,7 +8191,7 @@
                 title: "PRODUCT",
                 p: "Company we are proud to deliver hight quality standarts. In natural enviroment production, delivery and flexibility. organic bio oil a special production from our farm.",
                 clazz: "product"
-            }), react.createElement(letsBusiness_LetsBusiness, null)));
+            }), react.createElement(letsBusiness_LetsBusiness, null), react.createElement(footer_Footer, null)));
         };
         const app_App = App;
         const root = document.querySelector("#root");

@@ -536,11 +536,11 @@ h6 {
 
 .business {
   position: relative;
-  padding: 18.75rem 0rem 21.5rem 0rem;
+  padding: 18.75rem 0rem 20rem 0rem;
 }
 
 .no-webp .business:before{
-  background: url(../img/business/bg2.jpg); }
+  background: url(../img/business/bg2.jpg) 0 0/1538px 860px no-repeat; }
 
 .business:before {
   content: "";
@@ -553,7 +553,6 @@ h6 {
   width: 96.125rem;
   height: 54.25rem;
   background-size: cover;
-  background-position: center;
   z-index: -1;
 }
 
@@ -618,6 +617,183 @@ h6 {
 .business__button span {
   font-size: 0.875rem;
   color: #fff;
+}
+
+.footer {
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.footer-top {
+  padding-bottom: 1.8125rem;
+}
+
+.footer-top__columns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 11.25rem 3.75rem 8.125rem 6.25rem 19.375rem 3.5625rem 19.375rem;
+  grid-template-columns: 11.25rem 3.75rem 8.125rem 6.25rem 19.375rem 3.5625rem 19.375rem;
+}
+
+.footer-top__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-top__column:nth-child(1) {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.footer-top__column:nth-child(2) {
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+.footer-top__column:nth-child(3) {
+  padding-top: 0.125rem;
+  -ms-grid-column: 5;
+  grid-column: 5;
+}
+
+.footer-top__column:nth-child(4) {
+  padding-top: 0.125rem;
+  -ms-grid-column: 7;
+  grid-column: 7;
+}
+
+.footer-top__link {
+  margin-bottom: 1.0625rem;
+}
+
+.footer-top__link span {
+  letter-spacing: 0.1px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #697B03;
+  font-weight: 500;
+  line-height: 1.125rem;
+}
+
+.footer-top__title span {
+  letter-spacing: 0.2px;
+  font-weight: 500;
+  line-height: 1.125rem;
+  color: #697B03;
+}
+
+.footer-top__text {
+  padding-top: 0.125rem;
+  color: #697B03;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  margin-bottom: 0.875rem;
+  letter-spacing: 0.1px;
+}
+
+.footer-top__text_s {
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  color: #697B03;
+}
+
+.footer-top__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 1.25rem 2.75rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  border: 2px solid rgb(126, 78, 36);
+  max-width: 12.1875rem;
+  text-wrap: nowrap;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.footer-top__button span {
+  font-size: 0.875rem;
+  letter-spacing: 0.2px;
+  line-height: 1.125rem;
+  font-weight: 600;
+  color: #7E4E24;
+}
+
+.footer-top__button:hover {
+  background: rgba(226, 224, 224, 0.6);
+}
+
+.footer-top__data {
+  color: #697B03;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.footer-bottom {
+  padding: 2.375rem 0rem 2.375rem 0rem;
+  background: #697B03;
+}
+
+.footer-bottom__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0rem 2.375rem 0rem 2.375rem;
+}
+
+.footer-bottom__terms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-wrap: nowrap;
+}
+
+.footer-bottom__item {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  line-height: 1.125rem;
+  color: #fff;
+}
+
+.footer-bottom__logo {
+  padding: 0rem 0.9375rem 0rem 0.9375rem;
+}
+
+.footer-bottom__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-bottom__olives {
+  margin-right: 0.875rem;
+  color: #fff;
+}
+
+.footer-bottom__olives span {
+  text-wrap: nowrap;
+}
+
+.footer-bottom__inst {
+  margin-right: 0.875rem;
 }
 
 [class*=-ibg] {
@@ -886,4 +1062,4 @@ h6 {
 
 .webp .health-bunner:before{ background: url(../img/healthBunner/bg.webp) center/1826px 489px no-repeat; }
 
-.webp .business:before{ background: url(../img/business/bg2.webp); }
+.webp .business:before{ background: url(../img/business/bg2.webp) 0 0/1538px 860px no-repeat; }
