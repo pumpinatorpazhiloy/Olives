@@ -13644,9 +13644,11 @@
         const popup_SignUpPopup = SignUpPopup;
         var BurgerMenu = __webpack_require__(190);
         const Header = () => {
+            const [isOpen, setIsOpen] = (0, react.useState)(false);
             const scrollLock = () => {
+                setIsOpen(!isOpen);
                 const html = document.querySelector("html");
-                html.classList.toggle("lock");
+                isOpen ? html.classList.add("lock") : html.classList.remove("lock");
             };
             return react.createElement(react.Fragment, null, react.createElement("div", {
                 className: "header"
