@@ -13647,12 +13647,13 @@
             const [isOpen, setIsOpen] = (0, react.useState)(false);
             const scrollLock = () => {
                 const html = document.querySelector("html");
+                setIsOpen(!isOpen);
                 isOpen ? html.classList.add("lock") : html.classList.remove("lock");
             };
             return react.createElement(react.Fragment, null, react.createElement("div", {
                 className: "header"
             }, react.createElement(BurgerMenu.slide, {
-                onStateChange: () => scrollLock(!setIsOpen)
+                onStateChange: scrollLock
             }, react.createElement("a", {
                 id: "who",
                 className: "menu-item",
